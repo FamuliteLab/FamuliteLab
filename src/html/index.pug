@@ -1,0 +1,16 @@
+extend _layout/_default
+
+block vars
+  - path = '/'
+
+block main
+
+  // - console.log(OUTPUT_MODE)
+  // - console.log(data)
+
+  div(data-module='Sample')
+    p= data.sample.name
+
+  div(data-module='SampleOptions', data-options='{ "reply": "Goodbye" }')
+    p= data.nest_sample.act
+    p= data.sample.say

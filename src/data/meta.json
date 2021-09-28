@@ -1,0 +1,25 @@
+{
+  "/": {
+    "title": "title content",
+    "description": "description content",
+    "keywords": "keywords content",
+    "og": {
+      "type": "website",
+      "url": "http://localhost:3000/",
+      "title": "",
+      "description": "",
+      "image": "ogp.png",
+      "site_name": "site name"
+    },
+    "favicon": "favicon.ico",
+    "touch_icon": "touch-icon.png",
+    "windows_icon": {
+      "s": "windows_s.png",
+      "m": "windows_m.png",
+      "w": "windows_w.png",
+      "l": "windows_l.png",
+      "tile-color": "#ffffff"
+    },
+    "no_bot_crawl": false
+  }
+}

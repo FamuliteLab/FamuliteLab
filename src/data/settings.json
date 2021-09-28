@@ -1,0 +1,42 @@
+{
+  "rootURL": "http://localhost:3000",
+  "breakpoint": {
+    "wide": "1440",
+    "pc":   "769",
+    "sp":   "768",
+    "ssp":  "374"
+  },
+  "design": {
+    "pc": {
+      "size": 1366,
+      "grid": {
+        "num": 12,
+        "column": 54,
+        "gap": 32,
+        "edge": 20
+      }
+    },
+    "sp": {
+      "size": 375,
+      "grid": {
+        "num": 6,
+        "column": 45,
+        "gap": 13,
+        "edge": 20
+      }
+    }
+  },
+  "path": {
+    "asset": "/assets",
+    "script": "/scripts",
+    "style": "/styles",
+    "image": "/images"
+  },
+  "font": {
+    "baseSize": 10,
+    "family": {
+      "jp": "sans-serif",
+      "en": "sans-serif"
+    }
+  }
+}

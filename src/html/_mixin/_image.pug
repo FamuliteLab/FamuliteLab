@@ -1,0 +1,6 @@
+mixin img(src, alt)
+  img(src=src alt=alt)
+
+mixin res(src, alt)
+  img.u-is-pc(src=src alt=alt)
+  img.u-is-sp(src=src.replace(/_pc/g,"_sp") alt=alt)

@@ -4,13 +4,51 @@ block vars
   - path = '/'
 
 block main
+  -
+   var mv = [
+     {'img': '/assets/images/kv/kv-01.jpg'},
+     {'img': '/assets/images/kv/kv-02.jpg'},
+     {'img': '/assets/images/kv/kv-03.jpg'}
+   ]
+  .mv 
+    .mv--inner
+      ul.mv__list(data-module="KvSlider")
+        each item in mv
+          li.mv__list__item
+            img(src=`${item.img}` alt='kv')
+  
+  .l-frame
+    .about#about
+      .about--inner
+        .c__ttl ABOUT
+        .about__text 
+          | Famulite lab.は、ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
+          br.u-is-pc
+          | ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
+          br.u-is-pc
+          | ここに説明文が入ります。ここに説明文が入ります。
+          br.u-is-pc
+          | ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
+    
+    -
+      var member = [
+        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
+        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
+        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
+        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'}
+      ]
+    .member#members
+      .member--inner
+        .c__ttl MEMBERS
+        ul.member__list
+          each list in member
+            li.member__list__item
+              img(src=`${list.img}` class='member__list__item__img')
+              .member__list__item__name #{list.name}
+              .member__list__item__class #{list.class}
+              //- .member__list__item__text !{list.text}
 
-  // - console.log(OUTPUT_MODE)
-  // - console.log(data)
-
-  div(data-module='Sample')
-    p= data.sample.name
-
-  div(data-module='SampleOptions', data-options='{ "reply": "Goodbye" }')
-    p= data.nest_sample.act
-    p= data.sample.say
+    .works#works
+      .works--inner
+        .c__ttl WORKS
+        .about__text 悩み中〜

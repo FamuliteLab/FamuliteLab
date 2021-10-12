@@ -38,7 +38,7 @@ flexCenter()
   align-items center
 
 // font setting
-font-set(fs, lh = null, ls = null, fw = null)
+font(fs, lh = null, ls = null, fw = null)
   font-size fs px
   if lh != null
     line-height lh px
@@ -46,3 +46,7 @@ font-set(fs, lh = null, ls = null, fw = null)
     letter-spacing (ls/1000) em
   if fw != null
     font-weight fw
+
+// pxをvwに変換
+vw(size, viewport)
+  'calc(1vw * %s / %s * 100)' % (size viewport)

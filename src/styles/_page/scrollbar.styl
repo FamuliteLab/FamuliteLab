@@ -1,0 +1,80 @@
+.p-kv-scroll
+  position fixed
+  bottom 0
+  z-index 1
+  transition opacity 0.5s ease
+
+  +pc()
+    right vw(34, $vpc)
+
+  +sp()
+    right vw(40, $vsp)
+  
+  &:not(.is-loaded)
+    opacity 0
+
+  &.is-loaded
+    opacity 1
+
+.p-kv-scroll-text
+  position absolute
+  transform rotate(90deg) translate(0, -50%)
+  transform-origin top right
+  right 0
+  
+  +pc()
+    bottom vw(73, $vpc)
+    font-pc(12,12,200)
+  
+  +sp()
+    bottom vw(136, $vsp)
+    font-sp(24,24,200)
+
+.p-kv-scroll-bar
+  &::before
+    content ''
+    bottom 0
+    background rgba(255, 255, 255, 0.5)
+
+    +pc()
+      position absolute
+      width 1px
+      height vw(63, $vpc)
+
+    +sp()
+      position fixed
+      width 1px
+      height vw(124, $vsp)
+
+  &::after
+    content ''
+    bottom 0
+    background rgba(255, 255, 255, 1)
+    animation scroll 2s ease infinite
+
+    +pc()
+      position absolute
+      width 1px
+      height vw(63, $vpc)
+
+    +sp()
+      position fixed
+      width 1px
+      height vw(124, $vsp)
+
+@keyframes scroll
+  0%
+    transform scale(1, 0)
+    transform-origin 0 0
+
+  50%
+    transform scale(1, 1)
+    transform-origin 0 0
+
+  50.1%
+    transform scale(1, 1)
+    transform-origin 0 100%
+
+  100%
+    transform scale(1, 0)
+    transform-origin 0 100%

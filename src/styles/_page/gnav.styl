@@ -1,0 +1,196 @@
+.p-gnav-wrapper
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  overflow-y scroll
+  height 100vh
+  height calc(var(--vh, 1vh) * 100)
+  transition opacity 0.5s ease
+  z-index 100
+
+  &:not(.is-show)
+    opacity 0
+    pointer-events none
+
+    .p-gnav-content
+      pointer-events none
+      left 100%
+      transition left 0.5s ease 0.5s
+
+    .p-gnav-item
+      transform translate(50%, 0)
+      opacity 0
+      transition transform 0.5s ease, opacity 0.5s ease
+      transition-delay 0
+
+    .p-gnav-close
+      opacity 0
+      transition opacity 0.5s ease
+
+  &.is-show
+    opacity 1
+    pointer-events auto
+
+    .p-gnav-content
+      pointer-events auto
+      transition left 1s ease
+
+      +pc()
+        left 50%
+
+      +sp()
+        left 0
+
+    .p-gnav-item
+      transform translate(0, 0)
+      opacity 1
+      transition transform 1s ease 0.5s, opacity 1s ease 0.5s
+
+      for num in (1..10)
+        &:nth-child({num})
+          transition-delay (num - 1) * 0.1s + 1s !important
+
+    .p-gnav-close
+      opacity 1
+      transition opacity 0.5s ease 2s
+
+.p-gnav-area
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background rgba(255, 255, 255, 0.5)
+
+.p-gnav-content
+  position absolute
+  top 0
+  left 100%
+  height 100%
+  background rgba(255, 255, 255, 0.9)
+  overflow scroll
+
+  +pc()
+    width 50%
+    padding 0 vw(144, $vpc)
+
+  +sp()
+    width 100%
+    padding 0 vw(132, $vsp)
+
+.p-gnav-box
+  padding 110px 0
+  min-height 100%
+  flex(flex-start, center, row)
+
+  +pc()
+    padding vw(110, $vpc) 0
+
+  +sp()
+    padding vw(191, $vsp) 0
+
+.p-gnav-list
+  min-height 100%
+  +sp()
+    margin-top vw(100, $vsp)
+
+.p-gnav-item
+  a
+    color #303030
+    transition opacity 0.5s ease
+    display block
+
+    +pc()
+      font(28.03,28.03,200,400)
+
+    +sp()
+      font(15,15,200,400)
+    
+    &:not(:hover)
+      opacity 1
+
+    &:hover
+      opacity 0.5
+
+  + .p-gnav-item
+
+    +pc()
+      margin-top vw(67, $vpc)
+
+    +sp()
+      margin-top vw(113, $vsp)
+
+.p-gnav-close
+  position absolute
+  top 27px
+  right 27px
+  width 58px
+  height 58px
+  display inline-block
+  text-decoration none
+  z-index 100
+
+  +pc()
+    top vw(27, $vpc)
+    right vw(27, $vpc)
+    width vw(58, $vpc)
+    height vw(58, $vpc)
+
+  +sp()
+    top vw(40, $vsp)
+    right vw(40, $vsp)
+    width vw(80, $vsp)
+    height vw(80, $vsp)
+
+  &::before
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    height 1px
+    background #300c0d
+    display inline-black
+    transform translate(-50%, -50%) rotate(45deg)
+
+    +pc()
+      width vw(82, $vpc)
+
+    +sp()
+      width vw(112, $vsp)
+
+  &::after
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    height 1px
+    background #300c0d
+    display inline-black
+    transform translate(-50%, -50%) rotate(-45deg)
+
+    +pc()
+      width vw(82, $vpc)
+
+    +sp()
+      width vw(112, $vsp)
+
+.p-gnav-span
+  position relative
+  
+  +pc()
+    font-pc(14,14,200)
+    left vw(3, $vpc)
+  
+  +sp()
+    font-sp(24,24,200)
+    left vw(5, $vsp)
+  
+  + .p-gnav-text
+    
+    +pc()
+      margin-top vw(18, $vpc)
+    
+    +sp()
+      margin-top vw(39, $vsp)

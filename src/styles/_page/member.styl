@@ -1,0 +1,56 @@
+.member
+  +pc()
+    padding-top vw(120, $vpc)
+  +sp()
+    padding-top vw(200, $vsp)
+
+.member__list
+  display flex
+  justify-content center
+  flex-wrap wrap
+  +pc()
+    margin-top vw(50, $vpc)
+  +sp()
+    margin-top vw(100, $vsp)
+
+.member__list__item
+  display flex
+  flex-direction column
+  align-items center
+  +pc()
+    width vw(350, $vpc)
+    margin-bottom vw(80, $vpc)
+  +sp()
+    width vw(200, $vsp)
+    margin 0 auto vw(100, $vsp)  
+  
+  &:nth-child(2n)
+    +pc()
+      margin-left vw(100, $vpc)
+
+.member__list__item__img
+  +pc()
+    width vw(150, $vpc)
+  +sp()
+    width vw(250, $vsp)
+
+.member__list__item__name
+  +pc()
+    margin-top vw(20, $vpc)
+    font(18,18,50,500)
+  +sp()
+    margin-top vw(20, $vsp)
+    font(18,18,50,500)
+
+.member__list__item__class
+  +pc()
+    margin-top vw(10, $vpc)
+    font(14,14,50,400)
+  +sp()
+    margin-top vw(10, $vsp)
+    font(14,14,50,400)
+
+// .member__list__item__text
+//   +pc()
+//     margin-top vw(20, $vpc)
+//     font(16,16,50,500)

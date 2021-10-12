@@ -1,12 +1,12 @@
 {
   "/": {
-    "title": "title content",
-    "description": "description content",
+    "title": "Famulite Lab",
+    "description": "Famulite Labの公式サイトです。",
     "keywords": "keywords content",
     "og": {
       "type": "website",
-      "url": "http://localhost:3000/",
-      "title": "",
+      "url": "",
+      "title": "Famulite Lab",
       "description": "",
       "image": "ogp.png",
       "site_name": "site name"

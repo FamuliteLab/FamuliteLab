@@ -64,16 +64,24 @@ html
     //- style
     link(rel=`stylesheet`, href=`${stylePath}/app.css`)
 
+    //- font
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap' rel='stylesheet')
+
   body
+    div(data-module="ScrollBar HamburgerMenu")
 
-    header
-      include ../_object/block/_header
+      header
+        include ../_object/block/_header
+      
+      include ../_object/block/_scrollbar
+      include ../_object/block/_gnav
 
-    main
-      block main
+      main
+        block main
 
-    footer
-      include ../_object/block/_footer
+      footer
+        include ../_object/block/_footer
 
     block end_of_body
       //- js

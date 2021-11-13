@@ -3,3 +3,28 @@
     padding-top vw(120, $vpc)
   +sp()
     padding-top vw(200, $vsp)
+
+.works__list
+  +pc()
+    margin-top vw(80, $vpc)
+    display flex
+    justify-content space-between
+  +sp()
+    margin-top vw(80, $vsp)
+
+.works__list__itm
+  text-align center
+  +pc()
+    width 50%
+  
+  + .works__list__itm
+    +sp()
+      margin-top vw(80, $vsp)
+
+.works__list__itm__img
+  +pc()
+    margin vw(30, $vpc) auto 0
+    width vw(100, $vpc)
+  +sp()
+    margin vw(30, $vsp) auto 0
+    width vw(100, $vsp)

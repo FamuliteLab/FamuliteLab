@@ -4,12 +4,6 @@ block vars
   - path = '/'
 
 block main
-  -
-   var mv = [
-     {'img': '/assets/images/kv/kv-01.jpg'},
-     {'img': '/assets/images/kv/kv-02.jpg'},
-     {'img': '/assets/images/kv/kv-03.jpg'}
-   ]
   .mv 
     .mv--inner(data-module="ViewText")
       .mv__text(data-view-text-target)
@@ -21,7 +15,7 @@ block main
         .c__ttl ABOUT
         .about__blk
           .about__img 
-            img(src=`${imgPath}/common/famu.png`)
+            img(src='/htdocs/assets/images/common/famu.png')
           .c__text 
             | Famulite Lab.では、お酒が好きなメンバーが集まって、
             br.u-is-pc
@@ -33,14 +27,14 @@ block main
     -
       var member = [
         {
-          'img': '/assets/images/member/member-01.png',
+          'img': '/htdocs/assets/images/member/member-01.png',
           'name': 'NAKAMURO',
           'sub': 'ナカムロ',
           'class': '代表',
           'text': '20歳のときに日本酒に出会いました。日本酒は知れば知るほど奥が深く、究極のエンタテインメントであると考えています。<br class="u-is-pc">いつか、自分の手で日本酒を作りたいと夢を見ています。<br class="u-is-pc">好きな食べ物はカレーと和菓子（特にどら焼き）。<br class="u-is-pc">本職はゲームクリエイターとしてゲームプログラミング、<br class="u-is-pc">リズムアクションゲームの譜面制作やディレクション、<br class="u-is-pc">ピクセルアートなどにも幅広く取り組んでいます。'
         },
         {
-          'img': '/assets/images/member/member-02.png',
+          'img': '/htdocs/assets/images/member/member-02.png',
           'name': 'PANDA',
           'sub': 'ミユ',
           'class': 'フロントエンドエンジニア',
@@ -68,7 +62,7 @@ block main
           li.works__list__itm
             .c__ttl--lv2 SYSTEM 
             .works__list__itm__img
-              img(src=`${imgPath}/works/system.png`)
+              img(src='/htdocs/assets/images/works/system.png')
             .c__text
               span ・統計学e-learningシステムの
                 br.u-is-sp
@@ -82,7 +76,7 @@ block main
           li.works__list__itm
             .c__ttl--lv2 APP GAMES
             .works__list__itm__img
-              img(src=`${imgPath}/works/game.png`)
+              img(src='/htdocs/assets/images/works/game.png')
             .c__text
               span ・TriRoad
               br

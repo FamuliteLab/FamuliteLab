@@ -4,43 +4,55 @@
   +sp()
     padding-top vw(200, $vsp)
 
-.member__list
-  display flex
-  justify-content center
-  flex-wrap wrap
-  +pc()
-    margin-top vw(50, $vpc)
-  +sp()
-    margin-top vw(100, $vsp)
+// .member__list
+//   display flex
+//   justify-content center
+//   flex-wrap wrap
+//   +pc()
+//     margin-top vw(50, $vpc)
+//   +sp()
+//     margin-top vw(100, $vsp)
 
 .member__list__item
-  display flex
-  flex-direction column
-  align-items center
   +pc()
     width vw(350, $vpc)
-    margin-bottom vw(80, $vpc)
+    margin vw(80, $vpc) 0
   +sp()
     width vw(200, $vsp)
-    margin 0 auto vw(100, $vsp)  
+    margin vw(100, $vsp) 0 
   
   &:nth-child(2n)
     +pc()
       margin-left vw(100, $vpc)
 
+.member__list__item__blk
+  display flex
+  align-items center
+  justify-content center
+
+  +sp()
+    flex-direction column
+
 .member__list__item__img
   +pc()
-    width vw(150, $vpc)
+    width vw(250, $vpc)
   +sp()
     width vw(250, $vsp)
 
+.member__list__item__cnt
+  +pc()
+    margin-left vw(50, $vpc)
+    width vw(500, $vpc)
+
 .member__list__item__name
+  font-family 'Montserrat'
   +pc()
     margin-top vw(20, $vpc)
-    font(18,18,50,500)
+    font(20,20,50,600)
   +sp()
     margin-top vw(20, $vsp)
-    font(18,18,50,500)
+    font(18,18,50,600)
+    text-align center
 
 .member__list__item__class
   +pc()
@@ -49,8 +61,32 @@
   +sp()
     margin-top vw(10, $vsp)
     font(14,14,50,400)
+    text-align center
 
-// .member__list__item__text
-//   +pc()
-//     margin-top vw(20, $vpc)
-//     font(16,16,50,500)
+.member__list__item__text
+  +pc()
+    margin-top vw(20, $vpc)
+    font(14,24,50,400)
+  +sp()
+    margin-top vw(40, $vsp)
+    font(12,22,50,400)
+
+.slick-next,
+.slick-prev
+  border-top 2px solid #000
+  border-right 2px solid #000
+  +pc()
+    width vw(20, $vpc)
+    height vw(20, $vpc)
+  +sp()
+    width vw(20, $vsp)
+    height vw(20, $vsp)
+
+  &:before
+    content ''
+
+.slick-next
+  transform rotate(45deg)
+
+.slick-prev
+  transform rotate(-135deg)

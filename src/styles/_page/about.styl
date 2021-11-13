@@ -1,14 +1,18 @@
 .about
-  text-align center
   +pc()
     padding-top vw(120, $vpc)
   +sp()
     padding-top vw(200, $vsp)
 
-.about__text 
+.about__blk
   +pc()
-    font(14,24,50,400)
-    margin-top vw(50, $vpc)
+    display flex
+    justify-content space-between
+    align-items center
+    margin-top vw(100, $vpc)
+
+.about__img 
+  +pc()
+    width vw(400, $vpc)
   +sp()
-    font(14,24,50,400)
-    margin-top vw(50, $vsp)
+    margin-top vw(80, $vsp)

@@ -4,51 +4,80 @@ block vars
   - path = '/'
 
 block main
-  -
-   var mv = [
-     {'img': '/assets/images/kv/kv-01.jpg'},
-     {'img': '/assets/images/kv/kv-02.jpg'},
-     {'img': '/assets/images/kv/kv-03.jpg'}
-   ]
   .mv 
-    .mv--inner
-      ul.mv__list(data-module="KvSlider")
-        each item in mv
-          li.mv__list__item
-            img(src=`${item.img}` alt='kv')
+    .mv--inner(data-module="ViewText")
+      .mv__text(data-view-text-target)
+        | FAMULITE LAB.
   
   .l-frame
-    .about#about
+    .about#about(data-module="InView")
       .about--inner
         .c__ttl ABOUT
-        .about__text 
-          | Famulite lab.は、ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
-          br.u-is-pc
-          | ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
-          br.u-is-pc
-          | ここに説明文が入ります。ここに説明文が入ります。
-          br.u-is-pc
-          | ここに説明文が入ります。ここに説明文が入ります。ここに説明文が入ります。
+        .about__blk
+          .about__img 
+            img(src='/htdocs/assets/images/common/famu.png')
+          .c__text 
+            | Famulite Lab.では、お酒が好きなメンバーが集まって、
+            br.u-is-pc
+            | 日々の晩酌がちょっと楽しくなるようなコンテンツを
+            br.u-is-pc
+            | 研究・開発していきます。たまに真面目なモノも作ります。
+        
     
     -
       var member = [
-        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
-        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
-        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'},
-        {'img': '/assets/images/member/member-01.png', 'name': '名字 名前', 'class': '役職', 'text': '一言コメントなど。'}
+        {
+          'img': '/htdocs/assets/images/member/member-01.png',
+          'name': 'NAKAMURO',
+          'sub': 'ナカムロ',
+          'class': '代表',
+          'text': '20歳のときに日本酒に出会いました。日本酒は知れば知るほど奥が深く、究極のエンタテインメントであると考えています。<br class="u-is-pc">いつか、自分の手で日本酒を作りたいと夢を見ています。<br class="u-is-pc">好きな食べ物はカレーと和菓子（特にどら焼き）。<br class="u-is-pc">本職はゲームクリエイターとしてゲームプログラミング、<br class="u-is-pc">リズムアクションゲームの譜面制作やディレクション、<br class="u-is-pc">ピクセルアートなどにも幅広く取り組んでいます。'
+        },
+        {
+          'img': '/htdocs/assets/images/member/member-02.png',
+          'name': 'PANDA',
+          'sub': 'ミユ',
+          'class': 'フロントエンドエンジニア',
+          'text': '気づいたら日本酒を飲んでいました。<br class="u-is-pc">昔から絵を書いたり、文字を読み書きするのが好きで、将来はものづくりをしたいという気持ちがありました。Web実装の面白さを知ったことをきっかけにフロントエンドエンジニアになり、このWebサイトも制作させていただきました。<br class="u-is-pc">本職は某ジャニーズグループと若手俳優の追っかけ。<br class="u-is-pc">好きな食べ物はタフグミ。'
+        },
       ]
-    .member#members
+    .member#members(data-module="InView")
       .member--inner
         .c__ttl MEMBERS
-        ul.member__list
+        ul.member__list(data-module="MemberSlider")
           each list in member
             li.member__list__item
-              img(src=`${list.img}` class='member__list__item__img')
-              .member__list__item__name #{list.name}
-              .member__list__item__class #{list.class}
-              //- .member__list__item__text !{list.text}
+              .member__list__item__blk
+                .member__list__item__img
+                  img(src=`${list.img}`)
+                .member__list__item__cnt
+                  .member__list__item__name #{list.name}
+                  .member__list__item__class #{list.class}
+                  .member__list__item__text !{list.text}
 
-    .works#works
+    .works#works(data-module="InView")
       .works--inner
         .c__ttl WORKS
-        .about__text 悩み中〜
+        ul.works__list
+          li.works__list__itm
+            .c__ttl--lv2 SYSTEM 
+            .works__list__itm__img
+              img(src='/htdocs/assets/images/works/system.png')
+            .c__text
+              span ・統計学e-learningシステムの
+                br.u-is-sp
+                | 開発・運営
+              br
+              | ランダム問題生成アルゴリズムを搭載したe-learningシステム
+              br
+              |「北見工業大学 データ統計基礎」の
+              br.u-is-sp
+              | 学習補助教材として稼働中。
+          li.works__list__itm
+            .c__ttl--lv2 APP GAMES
+            .works__list__itm__img
+              img(src='/htdocs/assets/images/works/game.png')
+            .c__text
+              span ・TriRoad
+              br
+              | Coming soon...

@@ -1,4 +1,5 @@
 .p-gnav-wrapper
+  font-family 'Montserrat'
   position fixed
   top 0
   left 0
@@ -55,6 +56,7 @@
     .p-gnav-close
       opacity 1
       transition opacity 0.5s ease 2s
+      display block
 
 .p-gnav-area
   position absolute
@@ -74,11 +76,9 @@
 
   +pc()
     width 50%
-    padding 0 vw(144, $vpc)
 
   +sp()
     width 100%
-    padding 0 vw(132, $vsp)
 
 .p-gnav-box
   padding 110px 0
@@ -93,8 +93,11 @@
 
 .p-gnav-list
   min-height 100%
+  +pc()
+    margin-left vw(50, $vpc)
   +sp()
     margin-top vw(100, $vsp)
+    margin-left vw(120, $vpc)
 
 .p-gnav-item
   a
@@ -103,10 +106,10 @@
     display block
 
     +pc()
-      font(28.03,28.03,200,400)
+      font(28.03,28.03,70,400)
 
     +sp()
-      font(15,15,200,400)
+      font(15,15,70,400)
     
     &:not(:hover)
       opacity 1
@@ -151,7 +154,7 @@
     left 50%
     height 1px
     background #300c0d
-    display inline-black
+    display inline-block
     transform translate(-50%, -50%) rotate(45deg)
 
     +pc()
@@ -167,7 +170,7 @@
     left 50%
     height 1px
     background #300c0d
-    display inline-black
+    display inline-block
     transform translate(-50%, -50%) rotate(-45deg)
 
     +pc()

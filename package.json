@@ -54,6 +54,7 @@
     "@babel/polyfill": "^7.12.1",
     "jquery": "^3.6.0",
     "npm": "^7.18.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^7.2.0"
   }
 }

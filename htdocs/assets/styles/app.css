@@ -1298,7 +1298,6 @@ body img {
 .mv__text {
   font-family: 'Montserrat';
   position: absolute;
-  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1310,6 +1309,7 @@ body img {
     line-height: 53px;
     letter-spacing: 0.07em;
     font-weight: 500;
+    top: 50%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1318,6 +1318,7 @@ body img {
     line-height: 35px;
     letter-spacing: 0.07em;
     font-weight: 500;
+    top: 40%;
   }
 }
 [data-module*='ViewText'] [data-view-text-target] span {

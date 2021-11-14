@@ -1298,7 +1298,7 @@ body img {
 .mv__text {
   font-family: 'Montserrat';
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1330,6 +1330,93 @@ body img {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
+}
+@media screen and (min-width: 769px) {
+  .privacy {
+    width: calc(1vw * 1200 / 1280 * 100);
+    margin: calc(1vw * 100 / 1280 * 100) auto 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy {
+    width: calc(1vw * 600 / 750 * 100);
+    margin: calc(1vw * 200 / 750 * 100) auto 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .privacy__text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    margin-bottom: calc(1vw * 20 / 1280 * 100);
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy__text {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    margin-bottom: calc(1vw * 20 / 750 * 100);
+  }
+}
+.privacy__text span {
+  display: block;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.privacy__text a {
+  color: #808080;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+@media screen and (min-width: 769px) {
+  .privacy__text a {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy__text a {
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 769px) {
+  .privacy__text a:hover {
+    color: #000;
+  }
+}
+@media screen and (min-width: 769px) {
+  .privacy__hdg {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy__hdg {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 769px) {
+  .c__ttl + .privacy__text {
+    margin-top: calc(1vw * 80 / 1280 * 100);
+  }
+}
+@media screen and (max-width: 768px) {
+  .c__ttl + .privacy__text {
+    margin-top: calc(1vw * 80 / 750 * 100);
+  }
 }
 .p-kv-scroll {
   position: fixed;

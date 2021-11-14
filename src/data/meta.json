@@ -8,10 +8,33 @@
       "url": "",
       "title": "Famulite Lab",
       "description": "",
-      "image": "ogp.png",
-      "site_name": "site name"
+      "image": "famu.png",
+      "site_name": "Famulite Lab"
     },
-    "favicon": "favicon.ico",
+    "favicon": "logo-white.png",
+    "touch_icon": "touch-icon.png",
+    "windows_icon": {
+      "s": "windows_s.png",
+      "m": "windows_m.png",
+      "w": "windows_w.png",
+      "l": "windows_l.png",
+      "tile-color": "#ffffff"
+    },
+    "no_bot_crawl": false
+  },
+  "/path/": {
+    "title": "Famulite Lab | PRIVACY PORICY",
+    "description": "Famulite Labのプライバシーポリシーです。",
+    "keywords": "keywords content",
+    "og": {
+      "type": "article",
+      "url": "",
+      "title": "Famulite Lab",
+      "description": "",
+      "image": "famu.png",
+      "site_name": "Famulite Lab"
+    },
+    "favicon": "logo-white.png",
     "touch_icon": "touch-icon.png",
     "windows_icon": {
       "s": "windows_s.png",

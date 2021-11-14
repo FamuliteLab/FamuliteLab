@@ -1,0 +1,42 @@
+.privacy
+  +pc()
+    width vw(1200, $vpc)
+    margin vw(100, $vpc) auto 0
+  +sp()
+    width vw(600, $vsp)
+    margin vw(200, $vsp) auto 0
+
+.privacy__text
+  +pc()
+    font(14,22,50,400)
+    margin-bottom vw(20, $vpc)
+  +sp()
+    font(12,20,50,400)
+    margin-bottom vw(20, $vsp)
+  span
+    display block
+    padding-left 1em
+    text-indent -1em
+  a
+    color #808080
+    transition color 0.3s ease
+    +pc()
+      font(13,22,50,400)
+    +sp()
+      font(11,20,50,400)
+    &:hover
+      +pc()
+        color #000
+
+.privacy__hdg
+  +pc()
+    font(14,22,50,500)
+  +sp()
+    font(12,20,50,500)
+
+.c__ttl
+  + .privacy__text
+    +pc()
+      margin-top vw(80, $vpc)
+    +sp()
+      margin-top vw(80, $vsp)

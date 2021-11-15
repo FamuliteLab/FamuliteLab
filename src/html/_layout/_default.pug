@@ -39,14 +39,14 @@ html
       meta(property=`og:description`, content=meta.og.description)
     else
       meta(property=`og:description`, content=meta.description)
-    meta(property=`og:image`, content=`${rootURL}${imgPath}/common/meta/${meta.og.image}`)
+    meta(property=`og:image`, content=`${rootURL}${imgPath}/common/${meta.og.image}`)
     meta(property=`og:site_name`, content=meta.og.site_name)
 
     //- twitter card
     meta(name=`twitter:card`, content=`summary_large_image`)
 
     //- icon
-    link(rel=`shortcut icon`, href=`${imgPath}/common/meta/${meta.favicon}`)
+    link(rel=`shortcut icon`, href=`${imgPath}/common/${meta.favicon}`)
     link(rel=`apple-touch-icon` href=`${rootURL}${imgPath}/common/meta/${meta.touch-icon}`)
 
     //- windows icon

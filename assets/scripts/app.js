@@ -27,6 +27,51 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       n(6981), n(1390);
     },
+    3053: function _(t, e, n) {
+      "use strict";
+
+      function r(t, e) {
+        for (var n = 0; n < e.length; n++) {
+          var r = e[n];
+          r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r);
+        }
+      }
+
+      n.r(e), n.d(e, {
+        default: function _default() {
+          return i;
+        }
+      });
+
+      var i = function () {
+        function t(e) {
+          !function (t, e) {
+            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
+          }(this, t), this.elem = e, this.window = window, this.lastInnerWidth = window.innerWidth, this.lastInnerHeight = window.innerHeight, this.init();
+        }
+
+        var e, n;
+        return e = t, (n = [{
+          key: "init",
+          value: function value() {
+            var t = this;
+            this.window.addEventListener("load", function () {
+              t.setHeight();
+            }), this.window.addEventListener("orientationchange", function () {
+              t.setHeight();
+            }), this.window.addEventListener("resize", function () {
+              t.lastInnerWidth !== t.window.innerWidth && t.lastInnerHeight === t.window.innerHeight && (t.setHeight(), t.lastInnerWidth = t.window.innerWidth, t.lastInnerHeight = t.window.innerHeight);
+            });
+          }
+        }, {
+          key: "setHeight",
+          value: function value() {
+            var t = .01 * window.innerHeight;
+            document.documentElement.style.setProperty("--vh", "".concat(t, "px"));
+          }
+        }]) && r(e.prototype, n), t;
+      }();
+    },
     3142: function _(t, e, n) {
       "use strict";
 
@@ -10843,6 +10888,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     3986: function _(t, e, n) {
       var r = {
         "./": [1390, 7],
+        "./GetWindowHeight": [3053, 9, 143],
+        "./GetWindowHeight.js": [3053, 9, 143],
         "./HamburgerMenu": [3142, 9, 143],
         "./HamburgerMenu.js": [3142, 9, 143],
         "./InView": [4648, 9, 143],

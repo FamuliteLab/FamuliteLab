@@ -4,9 +4,10 @@ block vars
   - path = '/'
 
 block main
+  include ./_object/block/_gnav
   .mv 
     .mv--inner(data-module="ViewText")
-      .mv__text(data-view-text-target)
+      .mv__text(data-view-text-target data-kv-set-height-role="image")
         | FAMULITE LAB.
   
   .l-frame

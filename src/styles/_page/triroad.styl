@@ -9,10 +9,33 @@
   font-family 'Montserrat'
 
 .gm-ht__hdg
+  position relative
+  display inline-block
   +pc()
     font(36,36,50,500)
+    padding-left vw(70, $vpc)
   +sp()
     font(36,36,50,500)
+  &:after
+    content ''
+    background-image url('/assets/images/games/triroad/logo.jpg')
+    background-repeat no-repeat
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    +pc()
+      background-size vw(50, $vpc) vw(50, $vpc)
+      width vw(50, $vpc)
+      height vw(50, $vpc)
+      border-radius vw(10, $vpc)
+      left 0
+    +sp()
+      background-size vw(70, $vsp) vw(70, $vsp)
+      width vw(70, $vsp)
+      height vw(70, $vsp)
+      border-radius vw(10, $vsp)
+      right vw(-90, $vsp)
+
 
 .gm-ht__cnt
   +pc()
@@ -41,7 +64,7 @@
     font(14,24,90,400)
     margin-top vw(20, $vpc)
   +sp()
-    font(14,24,90,400)
+    font(16,24,90,400)
     margin-top vw(40, $vsp)
   
   + .gm-ht__cnt__ttl
@@ -67,7 +90,7 @@
   +pc()
     font(14,24,90,400)
   +sp()
-    font(14,24,90,400)
+    font(16,24,90,400)
 
 .gm-ht__cnt__list__itm__img
   +pc()
@@ -92,12 +115,90 @@
       margin-top vw(50, $vsp)
 
 .gm-ht__cnt__link
-  color #808080
-  transition color 0.3s ease
   +pc()
-    font(13,22,50,400)
+    margin-top vw(20, $vpc)
   +sp()
-    font(11,20,50,400)
+    margin-top vw(40, $vsp)
+.gm-ht__cnt__link__itm
+  color #000
+  transition opacity 0.3s ease
+  position relative
+  +pc()
+    font(13,30,50,400)
+  +sp()
+    font(13,30,50,400)
+  &:after
+    content ''
+    background-image url('/assets/images/common/icon-external.svg')
+    background-repeat no-repeat
+    position absolute
+    top 50%
+    transform translateY(-50%)
+    +pc()
+      right vw(-30, $vpc)
+      background-size vw(25, $vpc) vw(25, $vpc)
+      width vw(25, $vpc)
+      height vw(25, $vpc)
+    +sp()
+      right vw(-45, $vsp)
+      background-size vw(40, $vsp) vw(40, $vsp)
+      width vw(40, $vsp)
+      height vw(40, $vsp)
   &:hover
     +pc()
-      color #000
+      opacity 0.5
+
+.gm-ht__cnt__dl__link
+  display flex
+  align-items center
+  +pc()
+    margin-top vw(30, $vpc)
+  +sp()
+    margin-top vw(60, $vsp)
+  + .gm-ht__cnt__ttl
+    +pc()
+      margin-top vw(120, $vpc)
+    +sp()
+      margin-top vw(120, $vsp)
+
+.gm-ht__cnt__dl__link__itm--app
+  +pc()
+    width vw(150, $vpc)
+  +sp()
+    width vw(240, $vsp)
+
+.gm-ht__cnt__dl__link__itm--ggl
+  +pc()
+    width vw(200, $vpc)
+    margin-left vw(20, $vpc)
+  +sp()
+    width vw(320, $vsp)
+    margin-left vw(20, $vsp)
+
+.gm-ht__cnt__demo
+  display flex
+  +pc()
+    margin-top vw(40, $vpc)
+  +sp()
+    margin-top vw(40, $vsp)
+    flex-wrap wrap
+
+  + .gm-ht__cnt__ttl
+    +pc()
+      margin-top vw(120, $vpc)
+    +sp()
+      margin-top vw(120, $vsp)
+
+.gm-ht__cnt__demo__itm
+  +pc()
+    width vw(250, $vpc)
+  +sp()
+    width vw(280, $vsp)
+    margin-top vw(20, $vsp)
+  &:nth-child(even)
+    +sp()
+      margin-left vw(20, $vsp)
+
+  + .gm-ht__cnt__demo__itm
+    +pc()
+      margin-left vw(20, $vpc)

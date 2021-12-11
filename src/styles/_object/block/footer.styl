@@ -43,6 +43,37 @@
     +pc()
       opacity 0.7
 
+.b-footer__sns
+  display flex
+  align-items center
+  +pc()
+    margin-top vw(20, $vpc)
+  +sp()
+    margin-top vw(20, $vsp)
+
+.b-footer__sns__tw 
+  display block
+  +pc()
+    width vw(40, $vpc)
+  +sp()
+    width vw(70, $vsp)
+
+.b-footer__sns__yt
+  display block
+  +pc()
+    width vw(50, $vpc)
+    margin-left vw(20, $vpc)
+  +sp()
+    width vw(80, $vsp)
+    margin-left vw(20, $vsp)
+
+[class*='b-footer__sns__']
+  +pc()
+    transition opacity 0.3s ease
+  &:hover 
+    +pc()
+      opacity 0.7
+
 .b-footer__rights
   +pc()
     font(11,11,50,400)

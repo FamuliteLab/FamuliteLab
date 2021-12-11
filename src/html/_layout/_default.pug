@@ -14,6 +14,17 @@ doctype html
 html
   //- pathは各pugで定義
   head
+    .
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSQBB4EYDP"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NSQBB4EYDP');
+      </script>
+
     if meta.no_bot_crawl
       meta(name='robots' content='noindex,nofollow')
 
@@ -69,7 +80,7 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap' rel='stylesheet')
 
   body
-    div(data-module="HamburgerMenu")
+    div(data-module="HamburgerMenu GetWindowHeight")
 
       header
         include ../_object/block/_header

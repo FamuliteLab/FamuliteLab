@@ -1792,6 +1792,7 @@ body img {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    align-items: center;
     margin: calc(1vw * 80 / 1280 * 100) 0;
   }
 }

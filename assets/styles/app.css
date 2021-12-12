@@ -2119,6 +2119,32 @@ body img {
   text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+  .gm-ht__cnt__movie {
+    margin: calc(1vw * 50 / 1280 * 100) 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gm-ht__cnt__movie {
+    margin: calc(1vw * 50 / 750 * 100) 0;
+  }
+}
+
 iframe {
   margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  iframe {
+    width: calc(1vw * 560 / 1280 * 100) 0;
+    height: calc(1vw * 315 / 1280 * 100) 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  iframe {
+    width: 100%;
+    height: auto;
+  }
 }

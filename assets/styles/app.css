@@ -2114,3 +2114,11 @@ body img {
     border-right: 1px solid #fff;
   }
 }
+
+.gm-ht__cnt__movie {
+  text-align: center;
+}
+
+iframe {
+  margin: 0 auto;
+}
